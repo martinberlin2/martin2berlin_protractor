@@ -1,0 +1,5 @@
+# start with empty .gitignore to learn what we don't need to commit
+
+
+# Dependency directories   ----> after fetch, do npm install
+node_modules/
