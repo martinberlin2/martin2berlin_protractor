@@ -18,10 +18,10 @@ exports.config = {
       // nur damit gehts bei chrome  -- orig: 800,600
     } */
 	browserName: 'firefox',
-/* 	'moz:firefoxOptions': {
+	'moz:firefoxOptions': {
          prefs: {'privacy.window.name.update.enabled': false}
     }
- */  },
+  },
   suites: {
 	  find_angular: 'loadAngularHomepage.js',
   },

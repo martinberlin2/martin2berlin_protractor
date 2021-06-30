@@ -1,34 +1,11 @@
-[16:52:38] I/launcher - Running 1 instances of WebDriver
-[16:52:38] I/direct - Using FirefoxDriver directly...
+[18:57:03] I/launcher - Running 1 instances of WebDriver
+[18:57:03] I/direct - Using FirefoxDriver directly...
 Started
-[16:52:57] E/protractor - Could not find Angular on page http://www.angularjs.org/ : angular never provided resumeBootstrap
-[31mF[0m
+[32m.[0m
 
-Failures:
-1) loadPage just load the page
-  Message:
-[31m    Failed: Angular could not be found on the page http://www.angularjs.org/. If this is not an Angular application, you may need to turn off waiting for Angular.
-                              Please see 
-                              https://github.com/angular/protractor/blob/master/docs/timeouts.md#waiting-for-angular-on-page-load[0m
-  Stack:
-    Error: Angular could not be found on the page http://www.angularjs.org/. If this is not an Angular application, you may need to turn off waiting for Angular.
-                              Please see 
-                              https://github.com/angular/protractor/blob/master/docs/timeouts.md#waiting-for-angular-on-page-load
-        at C:\Users\Lap126\AppData\Roaming\npm\node_modules\protractor\built\browser.js:718:27
-        at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    From asynchronous test: 
-    Error
-        at C:\Users\Lap126\Documents\GitHub\martin2berlin_protractor\specs\loadAngularHomepage.js:17:5
-        at Generator.next (<anonymous>)
-        at C:\Users\Lap126\Documents\GitHub\martin2berlin_protractor\specs\loadAngularHomepage.js:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (C:\Users\Lap126\Documents\GitHub\martin2berlin_protractor\specs\loadAngularHomepage.js:4:12)
-        at Suite.<anonymous> (C:\Users\Lap126\Documents\GitHub\martin2berlin_protractor\specs\loadAngularHomepage.js:16:28)
 
-1 spec, 1 failure
-Finished in 11.695 seconds
+1 spec, 0 failures
+Finished in 3.46 seconds
 
-[16:52:59] I/launcher - 0 instance(s) of WebDriver still running
-[16:52:59] I/launcher - firefox #01 failed 1 test(s)
-[16:52:59] I/launcher - overall: 1 failed spec(s)
-[16:52:59] E/launcher - Process exited with error code 1
+[18:57:13] I/launcher - 0 instance(s) of WebDriver still running
+[18:57:13] I/launcher - firefox #01 passed
