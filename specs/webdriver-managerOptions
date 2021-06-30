@@ -1,0 +1,46 @@
+Usage: webdriver-manager <command> [options]
+
+Commands:
+  clean      removes all downloaded driver files from the out_dir
+  start      start up the selenium server
+  shutdown   shut down the selenium server
+  status     list the current available drivers
+  update     install or update selected binaries
+  version    get the current version
+
+Options:
+  --out_dir                   Location to output/expect                                                                                                            [default: C:\Users\Lap126\AppData\Roaming\npm\node_modules\protractor\node_modules\webdriver-manager\selenium]
+  --seleniumPort              Optional port for the selenium standalone server                                                                                     [default: 4444]
+  --appium-port               Optional port for the appium server                                                                                                  [default: 4723]
+  --avd-port                  Optional port for android virtual devices.  See mobile.md for details                                                                [default: 5554]
+  --versions.standalone       Optional seleniuim standalone server version (use 'latest' to get the most recent version)                                           [default: latest]
+  --versions.chrome           Optional chrome driver version (use 'latest' to get the most recent version)                                                         [default: latest]
+  --versions.gecko            Optional gecko driver version                                                                                                        [default: latest]
+  --versions.android          Optional android sdk version                                                                                                         [default: 24.4.1]
+  --versions.appium           Optional appium version                                                                                                              [default: 1.6.5]
+  --chrome_logs               File path to chrome logs
+  --logging                   File path to logging properties file
+  --android                   Update/use the android sdk
+  --avds                      Android virtual devices to emulate.  Use "all" for emulating all possible devices, and "none" for no devices                         [default: all]
+  --avd-use-snapshots         Rather than booting a new AVD every time, save/load snapshots of the last time it was used                                           [default: true]
+  --started-signifier         A string to be outputted once the selenium server is up and running.  Useful if you are writing a script which uses webdriver-manager.
+  --signal-via-ipc            If you are using --started-signifier, this flag will emit the signal string using process.send(), rather than writing it to stdout
+  --quiet                     Minimal console output
+  --detach                    Once the selenium server is up and running, return control to the parent process and continue running the server in the background.
+  --versions.ie               Optional internet explorer driver version (use 'latest' to get the most recent version)                                              [default: latest]
+  --ie64                      Update: install or update 64-bit IE driver. Start: use installed x64 IE driver.
+  --edge                      Use installed Microsoft Edge driver                                                                                                  [default: C:\Program Files (x86)\Microsoft Web Driver\MicrosoftWebDriver.exe]
+  --already-off-error         Normally if you try to shut down a selenium which is not running, you will get a warning.  This turns it into an error
+  --verbose                   Extra console output
+  --ignore_ssl                Ignore SSL certificates
+  --proxy                     Proxy to use for the install or update command
+  --alternate_cdn             Alternate CDN to binaries
+  --standalone                Install or update selenium standalone                                                                                                [default: true]
+  --chrome                    Install or update chromedriver                                                                                                       [default: true]
+  --gecko                     Install or update geckodriver                                                                                                        [default: true]
+  --android-api-levels        Which versions of the android API you want to emulate                                                                                [default: 24]
+  --android-archs             Which architectures you want to use in android emulation.  By default it will try to match os.arch()                                 [default: x86_64]
+  --android-platorms          Which platforms you want to use in android emulation                                                                                 [default: google_apis]
+  --android-accept-licenses   Automatically accept android licenses
+  --ie                        Install or update 32-bit ie driver
+  --ie32                      Install or update 32-bit ie driver

@@ -1,0 +1,6 @@
+loadAngularHomepage.ts(23,11): error TS2552: Cannot find name 'element'. Did you mean 'Element'?
+loadAngularHomepage.ts(23,19): error TS2304: Cannot find name 'by'.
+loadAngularHomepage.ts(24,22): error TS2552: Cannot find name 'element'. Did you mean 'Element'?
+loadAngularHomepage.ts(24,30): error TS2304: Cannot find name 'by'.
+loadAngularHomepage.ts(29,22): error TS2552: Cannot find name 'element'. Did you mean 'Element'?
+loadAngularHomepage.ts(29,34): error TS2304: Cannot find name 'by'.
