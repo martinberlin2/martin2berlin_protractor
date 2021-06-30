@@ -1,11 +1,21 @@
-[18:57:03] I/launcher - Running 1 instances of WebDriver
-[18:57:03] I/direct - Using FirefoxDriver directly...
+[20:47:51] I/launcher - Running 1 instances of WebDriver
+[20:47:51] I/direct - Using FirefoxDriver directly...
 Started
+Jasmine started
 [32m.[0m
+  loadPage
+    [32m√ just load the page[39m
+
+[32m.[0m  helloworldsteps
+    [32m√ should greet the named user[39m
+[32m.[0m    [32m√ should list todos[39m
 
 
-1 spec, 0 failures
-Finished in 3.46 seconds
 
-[18:57:13] I/launcher - 0 instance(s) of WebDriver still running
-[18:57:13] I/launcher - firefox #01 passed
+
+3 specs, 0 failures
+Finished in 6.55 seconds
+
+Executed 3 of 3 specs[32m SUCCESS[39m in 7 secs.
+[20:48:05] I/launcher - 0 instance(s) of WebDriver still running
+[20:48:05] I/launcher - firefox #01 passed

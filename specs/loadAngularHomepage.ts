@@ -10,10 +10,8 @@ describe('loadPage', async () => {
  
   beforeEach(async () => {
     await angHomepage.load();
-    // await browser.get('http://www.angularjs.org');
   });
 
-  //it('todo checkboxes',async() =>{
   it('just load the page', async () => {
   })
 })

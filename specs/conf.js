@@ -12,7 +12,7 @@ exports.config = {
 
   framework: 'jasmine',
   capabilities: {
-    /* browserName: 'chrome',  //laeuft
+/*     browserName: 'chrome',  //laeuft
     chromeOptions: {
       args: [ "--headless", "--disable-gpu", "--window-size=1920,1080" ]
       // nur damit gehts bei chrome  -- orig: 800,600
@@ -21,9 +21,11 @@ exports.config = {
 	'moz:firefoxOptions': {
          prefs: {'privacy.window.name.update.enabled': false}
     }
+ 
   },
   suites: {
-	  find_angular: 'loadAngularHomepage.js',
+	find_angular: 'loadAngularHomepage.js',
+    helloworld: 'helloworldstuff.js',
   },
   directConnect: true,
 
@@ -31,7 +33,7 @@ exports.config = {
   // collisions on the global namespace.
   noGlobals: true,
 
-/*   onPrepare: function () {
+  onPrepare: function () {
     var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 
     jasmine.getEnv().addReporter(
@@ -48,4 +50,4 @@ exports.config = {
             filePrefix: 'xmloutput'
         }));
     }  
- */};
+};

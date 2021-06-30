@@ -18,14 +18,13 @@ const angHomepage = new angularHomepagePO_1.AngularHomepage();
 describe('helloworldsteps', () => __awaiter(void 0, void 0, void 0, function* () {
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
         yield angHomepage.load();
-        // await browser.get('http://www.angularjs.org');
     }));
-    xit('should greet the named user', () => __awaiter(void 0, void 0, void 0, function* () {
+    it('should greet the named user', () => __awaiter(void 0, void 0, void 0, function* () {
         yield protractor_1.element(protractor_1.by.model('yourName')).sendKeys('Julie');
         const greeting = protractor_1.element(protractor_1.by.binding('yourName'));
         expect(yield greeting.getText()).toEqual('Hello Julie!');
     }));
-    xit('should list todos', () => __awaiter(void 0, void 0, void 0, function* () {
+    it('should list todos', () => __awaiter(void 0, void 0, void 0, function* () {
         const todoList = protractor_1.element.all(protractor_1.by.repeater('todo in todoList.todos'));
         expect(yield todoList.count()).toEqual(2);
         expect(yield todoList.get(1).getText()).toEqual('build an AngularJS app');

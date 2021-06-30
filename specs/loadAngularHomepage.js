@@ -16,9 +16,7 @@ const angHomepage = new angularHomepagePO_1.AngularHomepage();
 describe('loadPage', () => __awaiter(void 0, void 0, void 0, function* () {
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
         yield angHomepage.load();
-        // await browser.get('http://www.angularjs.org');
     }));
-    //it('todo checkboxes',async() =>{
     it('just load the page', () => __awaiter(void 0, void 0, void 0, function* () {
     }));
 }));
