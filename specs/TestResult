@@ -1,5 +1,5 @@
-[20:47:51] I/launcher - Running 1 instances of WebDriver
-[20:47:51] I/direct - Using FirefoxDriver directly...
+[21:23:20] I/launcher - Running 1 instances of WebDriver
+[21:23:20] I/direct - Using FirefoxDriver directly...
 Started
 Jasmine started
 [32m.[0m
@@ -14,8 +14,8 @@ Jasmine started
 
 
 3 specs, 0 failures
-Finished in 6.55 seconds
+Finished in 11.246 seconds
 
-Executed 3 of 3 specs[32m SUCCESS[39m in 7 secs.
-[20:48:05] I/launcher - 0 instance(s) of WebDriver still running
-[20:48:05] I/launcher - firefox #01 passed
+Executed 3 of 3 specs[32m SUCCESS[39m in 11 secs.
+[21:23:40] I/launcher - 0 instance(s) of WebDriver still running
+[21:23:40] I/launcher - firefox #01 passed
