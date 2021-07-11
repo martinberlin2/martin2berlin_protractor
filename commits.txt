@@ -4,3 +4,6 @@
 
 2.7.
 dieses Datei und conf.js ins Stammverz verschoben.
+
+11.7.
+vor elferschiessen, nur hier commit datei
