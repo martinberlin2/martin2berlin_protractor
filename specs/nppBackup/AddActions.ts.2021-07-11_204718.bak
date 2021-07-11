@@ -16,20 +16,14 @@ describe('AddActions', async () => {
 	await browser.get('http://www.angularjs.org');
   });
 
-  it('howManyActionsAtStart', async () => {
-	let todos = element(by.model("todoList.todoText"))
-		//by.model = Struktur wie in Quellcode
-	let howMany = 0;
-	todos.forEach() => {
-		if done == true:
-		howMany = howMany + 1;
-	}
-	expect howMany == 2;  //toBe 2  ?
+  it('howManyActions', async () => {
+	let todos = element
+		
   });
 		
 		
 		
-   /*	  
+	  
     await element(by.model('yourName')).sendKeys('Julie');
     const greeting = element(by.binding('yourName'));
     expect(await greeting.getText()).toEqual('Hello Julie!');
@@ -40,6 +34,5 @@ describe('AddActions', async () => {
     expect(await todoList.count()).toEqual(2);
     expect(await todoList.get(1).getText()).toEqual('build an AngularJS app');
   });
-  */
 })
 
