@@ -16,16 +16,35 @@ describe('AddActions', async () => {
 	await browser.get('http://www.angularjs.org');
   });
 
+  it('smoke test', async() => {
+	  expect(true.toBe(true));
+  })
+
   it('howManyActionsAtStart', async () => {
 	let todos = element(by.model("todoList.todoText"))
 		//by.model = Struktur wie in Quellcode
-	let howMany = 0;
+	let howMany: number;
+	howMany = 0;
+	todos.forEach() => {
+		howMany = howMany + 1;
+	}
+	expect howMany == 2;  //toBe 2  ?
+	
+  });
+  
+  it('howManyDoneActionsAtStart', async () => {
+	let todos = element(by.model("todoList.todoText"))
+		//by.model = Struktur wie in Quellcode
+	let howMany: number;
+	howMany = 0;
 	todos.forEach() => {
 		if done == true:
 		howMany = howMany + 1;
 	}
 	expect howMany == 2;  //toBe 2  ?
   });
+  
+  
 		
 		
 		
