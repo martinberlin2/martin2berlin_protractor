@@ -29,7 +29,6 @@ describe('AddActions', async () => {
 		howMany = howMany + 1;
 	}
 	expect howMany == 2;  //toBe 2  ?
-	
   });
   
   it('howManyDoneActionsAtStart', async () => {
@@ -62,3 +61,4 @@ describe('AddActions', async () => {
   */
 })
 
+//This Makes a MergeConflict
