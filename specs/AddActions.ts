@@ -13,7 +13,9 @@ describe('AddActions', async () => {
   });
 
   it('Tests From csv', async () => {
-	angular.forEach
+	  //forEach...
+    //nicht angular.forEach
+    // in develop 13.7.17:50
 		
   });
 		
