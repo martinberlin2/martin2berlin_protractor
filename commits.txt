@@ -24,3 +24,5 @@ Merge branch 'develop' of https://github.com/martinberlin2/martin2berlin_protrac
 use strict rausgenommen
 in NewFromDetachedHead
 
+13.7.23:46 
+ NewFromDetachedHead, develop soll head im baum sein
