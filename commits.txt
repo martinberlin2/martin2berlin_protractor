@@ -7,3 +7,7 @@ dieses Datei und conf.js ins Stammverz verschoben.
 
 11.7.
 vor elferschiessen, nur hier commit datei
+
+13.7.
+use strict rausgenommen
+in NewFromDetachedHead

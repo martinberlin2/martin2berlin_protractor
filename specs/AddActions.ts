@@ -9,7 +9,7 @@ import { browser, element, by} from 'protractor';
 const angHomepage = new AngularHomepage();
  */
 //describe('angularjs homepage', () => {
-use strict;
+//use strict; 
 describe('AddActions', async () => {
  
   beforeEach(async () => {
