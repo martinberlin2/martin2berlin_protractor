@@ -11,3 +11,9 @@ vor elferschiessen, nur hier commit datei
 13.7. 17:52
 nicht angular.forEach
 (develop)
+
+13.7. 18:17
+Merge branch 'develop' of https://github.com/martinberlin2/martin2berlin_protractor into develop
+
+# Conflicts:
+#	specs/AddActions.ts -- gelöst 
