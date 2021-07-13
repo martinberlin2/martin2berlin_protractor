@@ -5,9 +5,10 @@
 2.7.
 dieses Datei und conf.js ins Stammverz verschoben.
 
-11.7.
+11.7. develop
 vor elferschiessen, nur hier commit datei
 
-13.7.
+13.7. NewFromDetachedHead
 use strict rausgenommen
 in NewFromDetachedHead
+
