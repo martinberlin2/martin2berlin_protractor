@@ -9,6 +9,7 @@ import { browser, element, by} from 'protractor';
 const angHomepage = new AngularHomepage();
  */
 //describe('angularjs homepage', () => {
+use strict;
 describe('AddActions', async () => {
  
   beforeEach(async () => {
@@ -26,10 +27,25 @@ describe('AddActions', async () => {
 	let howMany: number;
 	howMany = 0;
 	todos.forEach() => {
-		howMany = howMany + 1;
+		if (this.todo.equals(true))  {
+			howMany = howMany + 1;
+		}     //toBe ?
 	}
 	expect howMany == 2;  //toBe 2  ?
   });
+  
+  it('howManyActionsAtStartByCount', async () => {
+	let todos = element(by.model("todoList.todoText"));
+		//by.model = Struktur wie in Quellcode
+	let howMany: number;
+	howMany = 0;
+	let howManyn:number = 0;
+	todos.forEach() => {
+		howMany = howMany + 1;
+	}
+	expect(howMany.toEqual(2));  //toBe 2  ?
+  });
+  
   
   it('howManyDoneActionsAtStart', async () => {
 	let todos = element(by.model("todoList.todoText"))
@@ -42,11 +58,10 @@ describe('AddActions', async () => {
 	}
 	expect howMany == 2;  //toBe 2  ?
   });
-  
-  
-		
-		
-		
+  	
+  //xit('data driven', async () => {
+  //})
+	
    /*	  
     await element(by.model('yourName')).sendKeys('Julie');
     const greeting = element(by.binding('yourName'));
@@ -61,4 +76,4 @@ describe('AddActions', async () => {
   */
 })
 
-//This Makes a MergeConflict Push 11.7. 14:36
+//This Makes a MergeConflict Push 11.7. 14:48
