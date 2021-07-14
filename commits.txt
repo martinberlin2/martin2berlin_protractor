@@ -33,3 +33,5 @@ in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBac
 
 14.7. 13:20 Push nach origin main 
 13:33 origin main ist "up to date", Inhalt ist aber initial main. Jetzt commit nach origin
+
+14.7. checkout out develop, pulled main - jetzt commit nach develop und ist dann gleich main
