@@ -1,0 +1,5 @@
+14.7.
+Main lokal, wird neuer Branch, um diese Datei anzulegen.
+Ziel: pull develop, merge, push nach main
+in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBackup, das Git nicht unlinken konnte beim checkout von develop auf main
+

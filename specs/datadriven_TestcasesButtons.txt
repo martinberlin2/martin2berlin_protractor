@@ -1,0 +1,14 @@
+Action 	Name	ExpectNumberOfActions	ExpectNumberOfRemaining	Comment
+Expect	Status	2	1	Expect=FÅhre it aus, Status: Frage C und D ab
+Add	PlanNextAction	3	1	
+Add	Prepare	4	1	
+Add	Do	5	1	
+Add	Evaluate	6	1	
+Add	End	7	1	
+Check	PlanNextAction	7	2	
+Check	Do	7	3	
+Check	End	7	4	
+Uncheck	PlanNextAction	7	3	
+Uncheck	Prepare	7	2	
+Add	ThatsItForToday	8	2	
+Check	ThatsItForToday	8	3	
