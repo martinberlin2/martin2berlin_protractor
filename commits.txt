@@ -32,3 +32,4 @@ Main lokal, Ziel: pull develop, merge, push nach main
 in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBackup, das Git nicht unlinken konnte beim checkout von develop auf main
 
 14.7. 13:20 Push nach origin main 
+13:33 origin main ist "up to date", Inhalt ist aber initial main. Jetzt commit nach origin
