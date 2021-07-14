@@ -1,0 +1,28 @@
+{
+  "name": "martin2protractor",
+  "version": "1.0.0",
+  "description": "a typescript example",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm install @types/node --save-dev",
+    "debug": "node --inspect-brk ./node_modules/protractor/bin/protractor conf.js",
+    "pretest": "npm run tsc && npm run webdriver-update",
+    "test": "protractor conf.js",
+    "tsc": "tsc",
+    "webdriver-update": "webdriver-manager update --standalone=true --gecko=true"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.3.12",
+    "jasmine": "^3.3.1",
+    "jasmine-spec-reporter": "^7.0.0",
+    "protractor": "^7.0.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.5",
+    "@types/selenium-webdriver": "^4.0.0",
+    "jasmine-reporters": "^2.0.0"
+  }
+}

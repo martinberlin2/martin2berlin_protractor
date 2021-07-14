@@ -1,0 +1,27 @@
+neues Projekt
+
+"C:\\Users\\Lap126\\Documents\\auticon\\Lern\\Testautomatisierung\\Protractor\\JanRepaired":
+geht mit Chrome, nicht Firefox: Failed: Angular could not be found on the page http://www.angularjs.org/.
+
+Verz specs und packages . und conf.js 
+packages.json !
+
+    tsc --init
+Dieser Befehl generiert eine gut kommentierte tsconfig.json-Datei.
+
+tsc geht in shell, nicht in vsc
+
+Google Chrome ist auf dem neuesten Stand.
+Version 91.0.4472.114 (Offizieller Build) (64-Bit)
+
+package.json orig:
+// "webdriver-update": "webdriver-manager update --standalone=false --gecko=false"
+"webdriver-update": "webdriver-manager update --standalone=true --gecko=true"  auch nicht 
+------------------- 
+?:
+  "scripts": {
+    "compile_to_es5": "gulp compile_to_es5",
+in C:\Users\Lap126\Documents\auticon\Lern\Testautomatisierung\Protractor\JanRepaired\node_modules\protractor
+wo wir sonst es6 machen
+--------------------------
+Lösung: https://github.com/angular/angular.js/issues/17117
