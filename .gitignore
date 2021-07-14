@@ -3,3 +3,7 @@
 
 # Dependency directories   ----> after fetch, do npm install
 node_modules/
+
+*.bak
+AddActions - KopieB4Merge.txt
+webdriver-managerOptions

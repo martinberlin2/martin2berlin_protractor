@@ -1,0 +1,272 @@
+
+  
+  JAN:
+  checkboxLearn = element.all(by.model("todo.done")).first()
+  todoText = element(by.model("todoList.todoText"))
+  newTodo = element.all(by.className("checkbox")).last()
+  
+  
+  <div class="todo-code">
+    <!-- ============== TODO ============== -->
+    <style type="text/css" id="todo.css">
+      .done-true {
+        text-decoration: line-through;
+        color: grey;
+      }
+    </style>
+    <script id="todo.js">
+      angular.module('todoApp', [])
+        .controller('TodoListController', function() {
+          var todoList = this;
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!     
+			todoList.todos = [
+            {text:'learn AngularJS', done:true},
+            {text:'build an AngularJS app', done:false}];
+
+          °todoList.addTodo = function() {
+            todoList.todos.push({text:todoList.todoText, done:false});
+            todoList.todoText = '';
+          };
+
+          todoList.remaining = function() {
+            var count = 0;
+            angular.forEach(todoList.todos, function(todo) {
+              count += todo.done ? 0 : 1;
+            });
+            return count;
+          };
+
+          todoList.archive = function() {
+            var oldTodos = todoList.todos;
+            todoList.todos = [];
+            angular.forEach(oldTodos, function(todo) {
+              if (!todo.done) todoList.todos.push(todo);
+            });
+          };
+        });
+    </script>
+    <script type="text/ng-template" id="todo.html">	
+      <h2>Todo</h2>
+      <div ng-controller="TodoListController as todoList">
+        <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+        [ <a href="" ng-click="todoList.archive()">archive</a> ]
+        <ul class="unstyled">
+          <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox">
+              <input type="checkbox" ng-model="todo.done">
+              <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </label>
+          </li>
+        </ul>
+        <form ng-submit="todoList.addTodo()">
+          <input type="text" ng-model="todoList.todoText"  size="30"
+                 placeholder="add new todo here">
+          <input class="btn-primary" type="submit" value="add">
+        </form>
+      </div>
+    </script>
+    <script type="text/ng-template" id="todo.annotation">
+      { "todo.html":
+        { "ng-app": "Tells AngularJS to be active in this portion of the page. In this case the entire document."
+        , "angular.min.js": "Load AngularJS."
+        , "todo.js": "Your behavior lives in JavaScript controllers."
+        , "ng-controller": "The behavior of content under this element will be managed using the <code>TodoListController</code> class defined in <code>todo.js</code>."
+        , "{{remaining()}}": "The <code>{{ }}</code> are a declarative way of specifying data binding locations in the HTML. AngularJS will automatically update this text whenever the <code>remaining()</code> function return value changes."
+        , "ng-click": "Instead of registering event-handlers, you declare which method on the controller to call. Here clicking the link will call <code>archive()</code> method."
+        , "ng-repeat": "Use <code>ng-repeat</code> to unroll a collection. Here, for every object in <code>todos</code>, AngularJS will create new copy of the <code>&lt;li&gt;</code> element. When objects are added to the <code>todos</code> collection the <code>ng-repeat</code> automatically adds new <code>&lt;li&gt;</code> elements into the DOM. Similarly when the objects are removed from <code>todos</code> then the corresponding <code>&lt;li&gt;</code> element is removed as well. This is one of the most versatile directives in AngularJS."
+        , "ng-model": "This links the form and the model. This means that any changes to the control update the data in your model, and when you change the model it updates the control. AngularJS automatically copies the state of the checkbox into <code>todo.done</code>. Conversely, if you update <code>todo.done</code> you will see the checkbox respond accordingly."
+        , "{{todo.done}}": "To show strikethroughs for completed tasks we have created a CSS class <code>done-true</code>. When the <code>todo.done</code> is <code>true</code> the resulting CSS selector is <code>done-true</code> which then applies the strikethrough."
+        , "ng-submit": "Intercepts form submission and instead calls <code>addTodo()</code>. Inside this method we read the <code>todoText</code> property and insert it into the <code>todos</code> collection."
+        }
+
+      , "todo.css":
+        { ".done-true": "Add strikethrough decoration when the task is done."
+        }
+
+      , "todo.js":
+        { "TodoListController": "The controller is the code behind the view. You can clearly see your application behavior because there is no DOM manipulation or framework specific boilerplate. Just simple, readable JavaScript."
+        , "$scope": "<code>$scope</code> contains your model data. It is the glue between the controller and the view. The <code>$scope</code> is just one of the services that can be injected into the controller."
+        , "todos": "We are creating the model with two initial todo items. Notice that you simply assign your model to the <code>$scope</code> and AngularJS reflects the state in the UI automatically. The model data is a Plain-Old-JavaScript-Object no need to wrap it in proxy or accesses the property through special setter methods."
+        , "addTodo": "We are assigning the behavior into the <code>$scope</code> so that the <code>ng-submit</code> can invoke it."
+        , "push": "This is just the <code>Array.push</code> method. Calling it updates the model, which then updates the view through data-binding. The <code>ng&ndash;repeat</code> is bound to this array. It automatically unrolls the array and adds the new DOM element into the view. (see <code>ng&ndash;repeat</code> in the <code>index.html</code> tab.)"
+        , "todoText = ''": "Because of  bi-directional data-binding, the model is always up to date. This means that we can simply read the state of the user input. No need for registering callbacks, event listeners or using framework dependent API."
+        , "''": "Writing to the form controls is just as easy. The data-binding will clear the control for us."
+        , "remaining": "This is a computed property. No need to define its dependencies or worry about when it needs to be updated."
+        , "todos = []": "You can replace the model with new instance at any time, without doing any special model listener registration."
+        }
+      }
+    </script>
+  </div>
+  <div class="tabs-code">
+    <!-- ============== Tabs ============== -->
+    <script id="components.js">
+      angular.module('components', [])
+
+        .directive('tabs', function() {
+          return {
+            restrict: 'E',
+            transclude: true,
+            scope: {},
+            controller: function($scope, $element) {
+              var panes = $scope.panes = [];
+
+              $scope.select = function(pane) {
+                angular.forEach(panes, function(pane) {
+                  pane.selected = false;
+                });
+                pane.selected = true;
+              }
+
+              this.addPane = function(pane) {
+                if (panes.length == 0) $scope.select(pane);
+                panes.push(pane);
+              }
+            },
+            template:
+              '<div class="tabbable">' +
+                '<ul class="nav nav-tabs">' +
+                  '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">'+
+                    '<a href="" ng-click="select(pane)">{{pane.title}}</a>' +
+                  '</li>' +
+                '</ul>' +
+                '<div class="tab-content" ng-transclude></div>' +
+              '</div>',
+            replace: true
+          };
+        })
+
+        .directive('pane', function() {
+          return {
+            require: '^tabs',
+            restrict: 'E',
+            transclude: true,
+            scope: { title: '@' },
+            link: function(scope, element, attrs, tabsController) {
+              tabsController.addPane(scope);
+            },
+            template:
+              '<div class="tab-pane" ng-class="{active: selected}" ng-transclude>' +
+              '</div>',
+            replace: true
+          };
+        })
+    </script>
+    <script>
+      angular.module('app-us', ['app', 'ngLocal.us']);
+      angular.module('app-sk', ['app', 'ngLocal.sk']);
+    </script>
+    <script id="app.js">
+      angular.module('app', ['components'])
+
+      .controller('BeerCounter', function($scope, $locale) {
+        $scope.beers = [0, 1, 2, 3, 4, 5, 6];
+        if ($locale.id == 'en-us') {
+          $scope.beerForms = {
+            0: 'no beers',
+            one: '{} beer',
+            other: '{} beers'
+          };
+        } else {
+          $scope.beerForms = {
+            0: 'žiadne pivo',
+            one: '{} pivo',
+            few: '{} pivá',
+            other: '{} pív'
+          };
+        }
+      });
+    </script>
+    <script type="text/ng-template" id="tabs.html">
+      <tabs>
+        <pane title="Localization">
+          <span>Date: {{ '2012-04-01' | date:'fullDate' }}</span><br>
+          <span>Currency: {{ 123456 | currency }}</span><br>
+          <span>Number: {{ 98765.4321 | number }}</span><br>
+        </pane>
+        <pane title="Pluralization">
+          <div ng-controller="BeerCounter">
+            <div ng-repeat="beerCount in beers">
+              <ng-pluralize count="beerCount" when="beerForms"></ng-pluralize>
+            </div>
+          </div>
+        </pane>
+      </tabs>
+    </script>
+    <script type="text/ng-template" id="tabs.annotation">
+      { "tabs.html":
+        { "\"app\"": "The <code>ng-app</code> activates the <code>app</code> module for this page region. The module contains the BeerCounter controller and has a dependency on the <code>components</code> module, which contains the HTML extension (directives) for <code>&lt;tabs&gt;</code> and <code>&lt;pane&gt;</code> components."
+        , "tabs": "We've extended HTML's vocabulary with a custom <code>tabs</code> element. The <code>tabs</code> abstracts the complex HTML structure and behavior necessary for rendering of tabs. The result is a more readable view and very easily reusable syntax."
+        , "pane": "Again, we've extended the HTML vocabulary with a custom <code>pane</code> element. The <code>pane</code> element renders the panes of each tab. The result is a more readable view."
+        , "title": "Components can take input parameters in the form of HTML attributes. In this case the <code>title</code> attribute specifies the tab's text."
+        , "Localization": "An example demonstrating localization features of AngularJS: date, number and currency formatting."
+        , "Pluralization": "An example demonstrating pluralization features of AngularJS. Notice that that the plural form of 'beer' changes in 'SK' locale at zero, one, two, and five beers."
+        , "BeerCounter": "We use the <code>BeerCounter</code> controller to set up counting rules depending on the locale."
+        , "ng-pluralize": "The <code>ng-pluralize</code> directive selects the right plural format for each locale. Unlike English, other languages often have complex plural rules depending on the number of items involved."
+        , "count": "Binds to the number property. The count becomes the selector for the plural form to choose."
+        , "when": "Binds to pluralization rules. The rules are unique for each locale and language combination."
+        }
+      , "components.js":
+        { "directive": "Use the module's <code>directive()</code> method to define new HTML vocabulary for our components. "
+        , "tabs": "Define the <code>&lt;tabs&gt;</code> component."
+        , "controller": "Just like with the application, the component can have a controller that provides the component's behavior."
+        , "$element": "Current DOM element of the component."
+        , "$scope": "Current scope of the component."
+        , "select": "Publish a <code>select()</code> method which will be used by the view to switch between tabs."
+        , "addPane": "Components often need to collaborate together as a unit. In our case the <code>&lt;pane&gt;</code> will use the <code>addPane()</code> method to be register itself with its <code>&lt;tabs&gt;</code> container."
+        , "template": "The <code>template</code> is the HTML which needs to be rendered by the browser instead of the <code>&lt;tabs&gt;</code> placeholder. Notice that the HTML in this template can have other directives within it."
+        , "restrict": "The <code>restrict</code> specifies the HTML format of the component. In this case the <code>&lt;tabs&gt;</code> must be an HTML element."
+        , "ng-transclude": "Marks the location where the contents of the <code>&lt;tabs&gt;</code> element will be placed."
+        , "transclude": "Specifies that when AngularJS replaces the <code>&lt;tabs&gt;</code> element with the expanded HTML that it should place the original content somewhere specified by an <code>ng-transclude</code> directive (see below)."
+        , "scope": "Our component needs to have a private scope so that its view properties are not accidentally modified outside the <code>&lt;tabs&gt;</code>. If you do need to expose attributes, you can declare input/output attributes. See the <code>&lt;pane&gt;</code> component below for an example."
+        , "replace": "Tells AngularJS that the original <code>&lt;tabs&gt;</code> element should be replaced with the <code>template</code> rather than appending to it."
+        , "active": "We set the <code>active</code> CSS class to show the currently active tab."
+        , "require": "Specify that the <code>&lt;pane&gt;</code> component must be inside a <code>&lt;tabs&gt;</code> component. This gives the <code>&lt;pane&gt;</code> component access to the <code>&lt;tabs&gt;</code>' controller methods -- the <code>addPane()</code> method in this case."
+        , "tabsController": "As we've specified we <code>require</code> the <code>&lt;tabs&gt;</code> as our container, we get passed its controller instance."
+        , "ng-click": "Select the clicked tab."
+        , "bind": "Specifies how is the <code>title</code> attribute on the <code>&lt;pane&gt;</code> element interpreted. The <code>bind</code> strategy copies the interpolated value to <code>&lt;pane&gt;</code>'s scope. This makes <code>title</code> available for binding in <code>template</code>."
+        }
+      , "app.js":
+        { "$locale": "The <code>$locale</code> service contains meta-data for the current locale. There are AngularJS locale modules available for each language locale combination."
+        , "beers": "Set up beers counting array. We will iterate over this array and see how the 'beers' count gets rendered for each count."
+        , "id": "Create different pluralization rules based on locale. In an actual app, one would load a different module which would contain translation as well as localization rules for each language."
+        , "beerForms": "Pluralization rules for English."
+        , "components": "The <code>app</code> module declares a dependency on the <code>components</code> module, which ensures that the directives in the <code>components</code> module are also loaded into the application."
+        }
+      }
+    </script>
+  </div>
+
+  <script src="google-code-prettify/prettify.min.js"></script>
+  <script src="js/homepage.js"></script>
+  <script src="js/download-data.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+  <script src="https://code.angularjs.org/1.8.2/i18n/angular-locale_sk.js"></script>
+  <script>
+    angular.module('ngLocal.sk', [])._configBlocks.push(angular.module('ngLocale')._configBlocks[0]);
+  </script>
+  <script src="https://code.angularjs.org/1.8.2/i18n/angular-locale_en-us.js"></script>
+  <script>
+    angular.module('ngLocal.us', [])._configBlocks.push(angular.module('ngLocale')._configBlocks[0]);
+    angular.bootstrap(document, ['ngRoute', 'homepage', 'ngLocal.us']);
+  </script>
+
+  <script async src="https://platform.twitter.com/widgets.js"></script>
+  <script type="text/javascript">
+    var _gaq=[
+      ['_setAccount','UA-8594346-3'],
+      ['_setDomainName', '.angularjs.org'],
+      ['_trackPageview'],['_trackPageLoadTime']
+    ];
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
