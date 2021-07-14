@@ -1,0 +1,35 @@
+﻿0000000000000000000000000000000000000000 45ce9544e1e7efe47b712de107c3388170368664 martinberlin2 <70579601+martinberlin2@users.noreply.github.com> 1624638931 +0200	clone: from https://github.com/martinberlin2/martin2berlin_protractor.git
+45ce9544e1e7efe47b712de107c3388170368664 45ce9544e1e7efe47b712de107c3388170368664 martinberlin2 <70579601+martinberlin2@users.noreply.github.com> 1624639097 +0200	checkout: moving from main to develop
+45ce9544e1e7efe47b712de107c3388170368664 c45869b7c4c9ac05006eea873aa1389f76714c69 martinberlin2 <70579601+martinberlin2@users.noreply.github.com> 1625071484 +0200	commit: Problem "can''t find Angular" in Fiefox gelöst. Diese Version hat es noch
+
+2.7.
+dieses Datei und conf.js ins Stammverz verschoben.
+
+
+11.7.
+vor elferschiessen, nur hier commit datei
+
+13.7. 17:52
+nicht angular.forEach
+(develop)
+
+13.7. 18:17
+Merge branch 'develop' of https://github.com/martinberlin2/martin2berlin_protractor into develop
+
+# Conflicts:
+#	specs/AddActions.ts -- gelöst 
+
+
+13.7. NewFromDetachedHead
+use strict rausgenommen
+in NewFromDetachedHead
+
+13.7.23:46 
+NewFromDetachedHead, develop soll head im baum sein
+
+14.7. aus CommitsMain.txt:
+Main lokal, Ziel: pull develop, merge, push nach main
+in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBackup, das Git nicht unlinken konnte beim checkout von develop auf main
+
+14.7. 13:20 Push nach origin main 
+13:33 origin main ist "up to date", Inhalt ist aber initial main. Jetzt commit nah origin
