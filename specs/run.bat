@@ -1,5 +1,4 @@
-call tsc 
-		rem > tsc.rep
+call tsc > tsc.rep
 call protractor conf.js > TestResult
 echo 
 

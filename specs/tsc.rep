@@ -1,0 +1,8 @@
+AddActions.ts(35,18): error TS1005: ';' expected.
+AddActions.ts(40,9): error TS1005: ';' expected.
+AddActions.ts(49,18): error TS1005: ';' expected.
+AddActions.ts(61,18): error TS1005: ';' expected.
+AddActions.ts(62,6): error TS1005: '(' expected.
+AddActions.ts(62,18): error TS1005: ')' expected.
+AddActions.ts(65,9): error TS1005: ';' expected.
+AddActions.ts(71,1): error TS1005: '}' expected.

@@ -27,13 +27,18 @@ describe('AddActions', async () => {
 	  //and loads page 
   })
 
+// https://www.tabnine.com/code/javascript/classes/jasmine/Env
+// https://medium.com/front-end-weekly/3-things-you-didnt-know-about-the-foreach-loop-in-js-ff02cec465b1
+// https://www.coreycleary.me/why-does-async-await-in-a-foreach-not-actually-await
+
+
   it('howManyActionsAtStart', async () => {
-	let todos = element(by.model("todoList.todoText"))
+	let todos = element(by.model("todoList.todoText"));
 		//by.model = Struktur wie in Quellcode
 	let howMany: number;
 	howMany = 0;
-	todos.forEach() => {
-		if (this.todo.equals(true))  {
+	todos.forEach(todo) {
+		if (todo.equals(true))  {
 			howMany = howMany + 1;
 		}     //toBe ?
 	}
