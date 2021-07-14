@@ -24,8 +24,8 @@ exports.config = {
  
   },
   suites: {
-	find_angular: 'loadAngularHomepage.js',
-    helloworld: 'helloworldstuff.js',
+	TestcasesForButtons: 'AddActions.js',
+	DoesItRun: 'old.js'
   },
   directConnect: true,
 

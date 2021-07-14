@@ -21,8 +21,7 @@ describe('angularjs homepage', () => {
     await angularHomepage.checkboxLearn.click();
     browser.sleep(5000);
     expect(await angularHomepage.checkboxLearn.isSelected()).toBeFalsy();
-    //expect(angularHomepage.checkboxLearn.isChecked()).toBeFalsy();    
-    
+    //expect(angularHomepage.checkboxLearn.isChecked()).toBeFalsy();       
   });
 
   xit('add todo',async() =>{

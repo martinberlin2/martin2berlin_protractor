@@ -24,6 +24,7 @@ describe('AddActions', async () => {
 		
   it('smoke test', async() => {
 	  expect(true.toBe(true));
+	  //and loads page 
   })
 
   it('howManyActionsAtStart', async () => {
@@ -66,19 +67,4 @@ describe('AddActions', async () => {
   	
   //xit('data driven', async () => {
   //})
-	
-   /*	  
-    await element(by.model('yourName')).sendKeys('Julie');
-    const greeting = element(by.binding('yourName'));
-    expect(await greeting.getText()).toEqual('Hello Julie!');
-  });
-
-  it('should list todos', async () => {
-    const todoList = element.all(by.repeater('todo in todoList.todos'));
-    expect(await todoList.count()).toEqual(2);
-    expect(await todoList.get(1).getText()).toEqual('build an AngularJS app');
-  });
-  */
 })
-
-//This Makes a MergeConflict Push 11.7. 14:48

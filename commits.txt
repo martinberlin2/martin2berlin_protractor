@@ -35,3 +35,6 @@ in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBac
 13:33 origin main ist "up to date", Inhalt ist aber initial main. Jetzt commit nach origin
 
 14.7. checkout out develop, pulled main - jetzt commit nach develop und ist dann gleich main
+
+Aufräumen: 1307_local_worklab.txt weg, AddActions: Kommentare, die auch in helloworldstuff sind, weg, "Makes a MergeConflict" weg, Suites: find_angular: 'loadAngularHomepage.js' -- ist erledigt, helloworld: 'helloworldstuff.js' weg, Datei bleibt zum evtl. Abgucken noch drin. Läuft old.js noch?, danach evtl auch weg, TestcasesButtons.xlsx weg - es gibt das als txt 
+

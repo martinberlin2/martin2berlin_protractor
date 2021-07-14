@@ -3,4 +3,4 @@ Main lokal, wird neuer Branch, um diese Datei anzulegen.
 Ziel: pull develop, merge, push nach main
 in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBackup, das Git nicht unlinken konnte beim checkout von develop auf main
 
-14.7. 14:07 datadriven_TestcasesButtons.txt in main staged und den Branch, in dem main und develop merged sind, gepullt. --> Commit to origin main 
+14.7. 14:07 datadriven_TestcasesButtons.txt in main staged und den Branch, in dem main und develop merged sind, gepullt. --> Commit to origin main , webdriver-managerOptions weg 
