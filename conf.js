@@ -7,6 +7,9 @@
 // description hints.
 //
 // To run this example, run `protractor conf.js`.
+
+"use strict";
+
 exports.config = {
   SELENIUM_PROMISE_MANAGER: false,
 
