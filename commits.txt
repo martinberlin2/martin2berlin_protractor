@@ -39,3 +39,7 @@ in main lokal ist das Verz. specs mit datadriven_TestcasesButtons.txt und nppBac
 Aufräumen: 1307_local_worklab.txt weg, AddActions: Kommentare, die auch in helloworldstuff sind, weg, "Makes a MergeConflict" weg, Suites: find_angular: 'loadAngularHomepage.js' -- ist erledigt, helloworld: 'helloworldstuff.js' weg, Datei bleibt zum evtl. Abgucken noch drin. Läuft old.js noch?, danach evtl auch weg, TestcasesButtons.xlsx weg - es gibt das als txt 
 
 14.7. 23:04 wie geht forEach ... oder for loop?
+
+20.7. SyntaxError: Cannot use import statement outside a module  old.js 
+-    "@types/node": "^15.12.5",
++    "@types/node": "^15.14.2",

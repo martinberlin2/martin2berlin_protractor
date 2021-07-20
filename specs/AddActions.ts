@@ -37,15 +37,17 @@ describe('AddActions', async () => {
 
 	it('howManyActionsAtStart', async () => {
 		let todos = element(by.model("todoList.todoText"));
+		console.log("typeof todos");
+		console.log(typeof todos);
 		//by.model = Struktur wie in Quellcode
 		//let todoElems = todos.element.all(byModel("text"));    //kein all
-		let howMany: number;
+/* 		let howMany: number;
 		howMany = 0;
 		todos.each(function(element, index) {    //todosElems
 			element.getText().then(function (text) {
 				console.log(index, text);
 			});
-		});
+		}); */
 	}); 
  
   // https://www.protractortest.org/#/api?view=ElementArrayFinder.prototype.each

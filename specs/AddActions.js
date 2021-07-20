@@ -39,15 +39,17 @@ describe('AddActions', () => __awaiter(void 0, void 0, void 0, function* () {
     // https://www.coreycleary.me/why-does-async-await-in-a-foreach-not-actually-await
     it('howManyActionsAtStart', () => __awaiter(void 0, void 0, void 0, function* () {
         let todos = protractor_1.element(protractor_1.by.model("todoList.todoText"));
+        console.log("typeof todos");
+        console.log(typeof todos);
         //by.model = Struktur wie in Quellcode
         //let todoElems = todos.element.all(byModel("text"));    //kein all
-        let howMany;
-        howMany = 0;
-        todos.each(function (element, index) {
-            element.getText().then(function (text) {
-                console.log(index, text);
-            });
-        });
+        /* 		let howMany: number;
+                howMany = 0;
+                todos.each(function(element, index) {    //todosElems
+                    element.getText().then(function (text) {
+                        console.log(index, text);
+                    });
+                }); */
     }));
     // https://www.protractortest.org/#/api?view=ElementArrayFinder.prototype.each
     /* element.all(by.css('.items li')).each(function(element, index) {

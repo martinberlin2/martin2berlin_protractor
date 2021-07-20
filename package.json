@@ -21,7 +21,7 @@
     "typescript": "^3.4.1"
   },
   "devDependencies": {
-    "@types/node": "^15.12.5",
+    "@types/node": "^15.14.2",
     "@types/selenium-webdriver": "^4.0.0",
     "jasmine-reporters": "^2.0.0"
   }
