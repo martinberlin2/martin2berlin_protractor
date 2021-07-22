@@ -1,7 +1,9 @@
 // local import of the exported AngularPage class
 //............ old one !!!! 
 
-import { browser } from 'protractor';
+require('protractor');
+// geht ohne Pfad ? wie browser ?
+// import {browser} from 'protractor';
 import {AngularHomepage} from './angularPage';
 const angularHomepage = new AngularHomepage(); 
 

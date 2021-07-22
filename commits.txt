@@ -43,3 +43,5 @@ Aufräumen: 1307_local_worklab.txt weg, AddActions: Kommentare, die auch in hell
 20.7. SyntaxError: Cannot use import statement outside a module  old.js 
 -    "@types/node": "^15.12.5",
 +    "@types/node": "^15.14.2",
+
+22.7. Versuch: require statt import ; Notice that we use ./ to locate the module, that means that the module is located in the same folder as the Node.js file.

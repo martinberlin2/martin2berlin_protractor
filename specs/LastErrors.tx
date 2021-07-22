@@ -1,5 +1,5 @@
 [00:21:55] E/launcher - Error: C:\Users\Lap126\Documents\GitHub\martin2berlin_protractor\specs\old.js:4
 import { browser } from 'protractor';
-^^^^^^
-
 SyntaxError: Cannot use import statement outside a module
+das:
+var dt = require('./myfirstmodule'); jab ich - wie Pfad?
